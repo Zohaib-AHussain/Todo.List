@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:clipToPadding="false"
+    tools:context="todolist.example.com.todolist.AddTodoItemActivity"
+    android:background="@color/light_gray">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/name_date_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/todo_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="16dp">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/todo_item_name"/>
+        </android.support.design.widget.TextInputLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/date_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_date_container"
+        android:layout_marginTop="16dp">
+        <TextView
+            android:text="@string/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/primary_text" />
+
+        <DatePicker
+            android:id="@+id/todo_item_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:datePickerMode="spinner"
+            android:spinnersShown="true"
+            android:layout_marginTop="10dp"
+            android:calendarViewShown="false"
+        />
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:padding="8dp"
+        android:layout_below="@id/date_container"
+        android:layout_marginTop="16dp" android:id="@+id/priority_container">
+        <TextView
+            android:text="@string/priority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:textColor="@color/primary_text"
+        />
+        <LinearLayout
+            android:id="@+id/high_priority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="start|left|bottom"
+            android:padding="8dp"
+            android:layout_marginLeft="40dp"
+        >
+            <View
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/red" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/high_priority"
+            />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/med_priority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center|bottom"
+            android:padding="8dp">
+            <View
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/yellow" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/medium_priority"
+            />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/low_priority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="end|right|bottom"
+            android:padding="8dp"
+            android:layout_marginRight="40dp"
+        >
+            <View
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/green" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/low_priority"
+            />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" android:src="@drawable/save"
+        android:layout_alignParentBottom="true" android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/dialog_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/priority_container"
+        android:layout_marginTop="16dp"
+        android:visibility="gone">
+
+        <Button style="@style/dialogButton"
+            android:id="@+id/cancel"
+        android:text="@string/cancel_dialog"/>
+
+        <Button style="@style/dialogButton"
+            android:id="@+id/delete"
+            android:text="@string/delete_dialog"/>
+
+        <Button style="@style/dialogButton"
+            android:id="@+id/save"
+            android:text="@string/save_dialog"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

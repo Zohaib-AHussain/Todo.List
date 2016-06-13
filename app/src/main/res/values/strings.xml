@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">Todo.List</string>
+    <string name="app_name">TodoList</string>
+    <string name="todo_item_name">Name</string>
+    <string name="high_priority">High</string>
+    <string name="medium_priority">Med</string>
+    <string name="low_priority">Low</string>
+    <string name="priority">Priority</string>
+    <string name="date">Due Date</string>
+    <string name="action_add">Add</string>
+    <string name="cancel_dialog">Cancel</string>
+    <string name="delete_dialog">Delete</string>
+    <string name="save_dialog">Save</string>
+    <string name="enter_all_info">Please enter all information</string>
+    <string name="add_item">Add Todo Item</string>
 </resources>

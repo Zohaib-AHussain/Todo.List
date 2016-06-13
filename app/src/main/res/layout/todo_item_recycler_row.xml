@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:padding="8dp">
+
+    <View
+        android:id="@+id/priority"
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        tools:background="@android:color/holo_red_light" />
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        tools:text="Finish this App"
+        android:layout_alignTop="@+id/status"
+        android:layout_alignLeft="@+id/due_date"
+        android:layout_alignStart="@+id/due_date"
+ />
+
+    <TextView
+        android:id="@+id/due_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="14dp"
+        android:textStyle="italic"
+        tools:text="10 / 10 / 90"
+        android:layout_below="@+id/item_name"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"/>
+
+    <CheckBox
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>
